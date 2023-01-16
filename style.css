@@ -83,57 +83,63 @@ select {
 
 body {
   background: var(--dark-blue);
-  font-family: 'Barlow Semi Condensed', sans-serif;
+  font-family: "Barlow Semi Condensed", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.box{
-    height: 365px;
-    width: 900px;
-    border-radius: 10px;
-    background-color: var(--Dark-desaturated-blue);
+.box {
+  height: 365px;
+  width: 900px;
+  border-radius: 10px;
+  background-color: var(--Dark-desaturated-blue);
 }
-.wrapper{
-    display: flex;
-    justify-content: space-between;
+.wrapper {
+  display: flex;
+  justify-content: space-between;
 }
-img{
-    width: 430px;
-    height: 365px;
-    border-radius: 4px;
-    object-fit: cover;
+img {
+  width: 430px;
+  height: 365px;
+  border-radius: 4px;
+  object-fit: cover;
+  filter: invert(37%) sepia(17%) saturate(902%) hue-rotate(252deg)
+    brightness(94%) contrast(86%);
 }
-h2{
-    color: var(--White);
-    margin-left: 20px;
-    max-width: 280px;
-    font-size: 32px;
-    line-height: 2.3rem;
-    padding-top: 50px;
-    margin-left: 70px;
+.header,
+h2 {
+  color: var(--White);
+  margin-left: 20px;
+  max-width: 280px;
+  font-size: 32px;
+  line-height: 2.3rem;
+  padding-top: 50px;
+  margin-left: 70px;
 }
-span{
-    color: var(--Soft-violet);
+span {
+  color: var(--Soft-violet);
 }
-.mainTxt{
-    color: var(--Slightly-transparent-white);
-    font-size: 14px;
-    max-width: 300px;
-    opacity: 0.8;
-    font-weight: 400;
-    margin: 30px 70px;
+.mainTxt {
+  color: var(--Slightly-transparent-white);
+  font-size: 14px;
+  max-width: 300px;
+  opacity: 0.8;
+  font-weight: 400;
+  margin: 30px 70px;
+  line-height: 1.6rem;
 }
-.flexer{
-    display: flex;
-    width: 0px;
-    height: 0px;
+.flexer {
+  display: flex;
+  width: 0px;
+  height: 0px;
+  position: absolute;
+  top: 55%;
 }
-.statsTXt{
-    color: var(--Slightly-transparent-white);
-    opacity: 0.5; 
-    margin-left: 65px;
-    margin-top: 3px;
+.statsTXt {
+  color: var(--Slightly-transparent-white);
+  opacity: 0.5;
+  margin-left: 70px;
+  margin-top: 3px;
 }
 
 /* .attribution {
@@ -143,3 +149,32 @@ span{
   .attribution a {
     color: hsl(228, 45%, 44%);
   } */
+@media (max-width: 500px) {
+  body {
+    display: block;
+    background-color: wheat;
+  }
+  .box {
+    width: 100%;
+    height: 70rem;
+    border-radius: 2px;
+  }
+  .wrapper {
+    flex-direction: column-reverse;
+  }
+  .header {
+    margin-top: 60px;
+  }
+  .flexer {
+    flex-direction: column;
+    top: 110%;
+    margin-left: 20%;
+  }
+  .mainTxt{
+    max-width: 230px;
+    font-size: 16px;
+    line-height: 1.4rem;
+    margin-left: 83px;
+    opacity: 1;
+  }
+}
